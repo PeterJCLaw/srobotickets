@@ -11,7 +11,7 @@ class SRoboLDAP
    
   class << self
 
-    attr_accessor :key,:ldappwd
+    attr_accessor :key,:ldappwd,:ldapuser
 
     def dummy= (arg)
         @dummy = arg

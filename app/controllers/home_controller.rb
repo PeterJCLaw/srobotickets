@@ -32,8 +32,8 @@ class HomeController < ApplicationController
     @user_name = params[:user]
     @check = params[:check]
     if @check
-        @details = SRoboLDAP.instance.ldap_user_details({"username" => "tickets", "password" => SRoboLDAP.ldappwd}, @user_name)
-        @school  = team_to_school(SRoboLDAP.instance.ldap_groups({"username" => "tickets", "password" => SRoboLDAP.ldappwd}, @user_name))
+        @details = SRoboLDAP.instance.ldap_user_details({"username" => SRoboLDAP.ldapuser, "password" => SRoboLDAP.ldappwd}, @user_name)
+        @school  = team_to_school(SRoboLDAP.instance.ldap_groups({"username" => SRoboLDAP.ldapuser, "password" => SRoboLDAP.ldappwd}, @user_name))
         name = @details[:cn] + " " + @details[:sn]
         name = capitalize_parts(name, " ")
         name = capitalize_parts(name, "-")

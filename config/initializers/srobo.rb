@@ -6,6 +6,7 @@ require "srobo_ldap"
 
 SRoboLDAP.key = "osadifjoqijfqwoefjoqiefjoqi"
 SRoboLDAP.ldappwd = "oasifjasoidfja"
+SRoboLDAP.ldapuser = "tickets"
 
 
 def team_to_school(groups)
